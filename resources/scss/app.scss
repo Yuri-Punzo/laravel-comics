@@ -48,6 +48,38 @@
     }
 }
 
+#site_main {
+    background-color: black;
+    color: white;
+
+    .load_more_btn {
+        background-color: #0282f9;
+        padding: 0.5rem 2.5rem;
+        font-weight: bold;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .current_series_tag {
+        background-color: #0282f9;
+        padding: 0 1rem;
+        font-weight: bold;
+        font-size: 25px;
+        position: absolute;
+        top: -67px;
+        left: -12px;
+    }
+
+    img {
+        height: 185px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
 #site_footer_top {
     background-color: #0282f9;
     color: white;

@@ -18,6 +18,5 @@
         <div class="jumbotron">
 
         </div>
-
     </div>
 </header>
