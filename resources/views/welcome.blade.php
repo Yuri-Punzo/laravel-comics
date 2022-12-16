@@ -15,7 +15,9 @@ Nota: per uscire dal terminale quando é bloccato dai processi npm run dev o php
 Concentratevi sul layout:
 create un file di layout in cui inserire la struttura comune di tutte le pagine del sito web (tag head, tag body, ...)
 ed includendo header e footer tramite due partials.
+
 Create poi una rotta per visualizzare la lista di tutti i fumetti recuperati da un file inserito nella cartella config e abbellite il tutto sfruttando Sass.
+
 Bonus:
 Create più pagine che estendono lo stesso layout
  -->
@@ -30,13 +32,20 @@ Create più pagine che estendono lo stesso layout
             <span class="current_series_tag">CURRENT SERIES</span>
         </div>
         <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6 g-2">
-            <!-- cicla la colonna -->
+            @forelse($comics as $comic)
             <div class="col">
                 <div>
-                    <img src="" alt="title">
-                    <h5 class="py-2"> title </h5>
+                    <img src="{{$comic['thumb']}}" alt="title">
+                    <h5 class="py-2"> {{$comic['title']}} </h5>
                 </div>
             </div>
+            @empty
+            <div class="col">
+                <div>
+                    <p>No Comics Found !</p>
+                </div>
+            </div>
+            @endforelse
         </div>
 
     </div>

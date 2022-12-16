@@ -9,8 +9,11 @@
                 </div>
                 <div class="col">
                     <nav class="my_navbar">
+                        @foreach($links as $link)
                         <a href="#">
+                            {{$link['text']}}
                         </a>
+                        @endforeach
                     </nav>
                 </div>
             </div>
