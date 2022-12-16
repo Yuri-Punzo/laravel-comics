@@ -10,9 +10,15 @@
                 <div class="col">
                     <nav class="my_navbar">
                         @foreach($links as $link)
-                        <a href="{{route('comics')}}">
+                        @if($link['text'] === "Comics")
+                        <a href="{{route('comics')}}" class="{{Route::currentRouteName() === 'comics' ? 'current_page' : ''}}">
                             {{strtoupper($link['text'])}}
                         </a>
+                        @else
+                        <a href="#">
+                            {{strtoupper($link['text'])}}
+                        </a>
+                        @endif
                         @endforeach
                     </nav>
                 </div>
