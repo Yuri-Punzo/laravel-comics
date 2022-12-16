@@ -8,7 +8,7 @@ return [
         ],
         [
             "text" => "Comics",
-            "href" => "#"
+            "href" => "{{route('comics')}}"
         ],
         [
             "text" => "Movies",

@@ -34,10 +34,19 @@ Create più pagine che estendono lo stesso layout
         <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6 g-2">
             @forelse($comics as $comic)
             <div class="col">
+                @if($comic === $comics[0])
+                <a href="{{route('info')}}" class=" no_style">
+                    <div>
+                        <img src="{{$comic['thumb']}}" alt="title">
+                        <h5 class="py-2"> {{$comic['title']}} </h5>
+                    </div>
+                </a>
+                @else
                 <div>
                     <img src="{{$comic['thumb']}}" alt="title">
                     <h5 class="py-2"> {{$comic['title']}} </h5>
                 </div>
+                @endif
             </div>
             @empty
             <div class="col">

@@ -10,7 +10,7 @@
                 <div class="col">
                     <nav class="my_navbar">
                         @foreach($links as $link)
-                        <a href="#">
+                        <a href="{{route('comics')}}">
                             {{strtoupper($link['text'])}}
                         </a>
                         @endforeach

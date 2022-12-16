@@ -20,6 +20,7 @@ Route::get('/', function () {
 })->name('comics');
 
 Route::get('/info', function () {
+    $links = config("db.navbarMenu");
     $comics = config("db.comics");
-    return view('welcome', compact("comics"));
+    return view('info', compact("comics"), compact("links"));
 })->name('info');
