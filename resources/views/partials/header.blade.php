@@ -11,7 +11,7 @@
                     <nav class="my_navbar">
                         @foreach($links as $link)
                         <a href="#">
-                            {{$link['text']}}
+                            {{strtoupper($link['text'])}}
                         </a>
                         @endforeach
                     </nav>
